@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
 margin:0;
 padding:0;
@@ -11,20 +14,26 @@ color:white;
 }
 
 header{
-height:100vh;
+padding:60px 20px;
 background:linear-gradient(rgba(7,26,51,.8),rgba(7,26,51,.8)),
 url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80");
 background-size:cover;
 background-position:center;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,.25);
-backdrop-filter:blur(10px);
+nav ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    flex-wrap:nowrap;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+nav ul li{
+    white-space:nowrap;
 }
 
 .logo{
@@ -122,4 +131,60 @@ background:#0b2343;
 .contact p{
 margin:15px 0;
 font-size:20px;
+}
+.services p{
+    line-height:2;
+    margin:10px 0;
+}
+
+.card{
+    margin-top:30px;
+    padding:25px;
+    border-radius:15px;
+    background:#0d2b53;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.card h3{
+    color:#d4af37;
+    margin-bottom:15px;
+}
+/* القائمة المنسدلة */
+
+nav ul li{
+    position:relative;
+}
+
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top:40px;
+    right:0;
+    background:#0b2343;
+    width:260px;
+    border-radius:10px;
+    padding:10px 0;
+    list-style:none;
+    box-shadow:0 10px 20px rgba(0,0,0,.4);
+    z-index:999;
+}
+
+.dropdown-menu li{
+    padding:0;
+}
+
+.dropdown-menu li a{
+    display:block;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+}
+
+.dropdown-menu li a:hover{
+    background:#d4af37;
+    color:#071a33;
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
 }
